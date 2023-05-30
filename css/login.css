@@ -1,0 +1,25 @@
+
+form.loginPage {
+    width: 80%;
+    margin: auto;
+    padding-top: 105px;
+    padding-bottom: 100px;
+    font-weight: 700;
+    color: #343232;
+    background-color: #e4dcdc;
+    border: #343232 double 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.loginPage h1 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 55px;
+}
+.loginPage a {
+    display: inline-block;
+    margin-top: 5px;
+}
+.loginPage a:hover {
+    color: #8d85e6;
+}

@@ -1,0 +1,48 @@
+form h1 {
+    line-height: 70px;
+}
+form.registerPage {
+    width: 80%;
+    margin: auto;
+    padding: 105px 65px 100px;
+    text-align: center;
+    font-weight: 700;
+    color: #343232;
+    background-color: #e4dcdc;
+    border: #343232 double 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.registerPage h1 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 55px;
+}
+.registerPage a {
+    display: inline-block;
+    margin-top: 5px;
+}
+.registerPage a:hover {
+    color: #8d85e6;
+}
+.registerPage table{
+    margin: auto;
+}
+.registerPage tbody:before {
+    content: '';
+    display: block;
+    height: 15px;
+}
+.registerPage td {
+    color: #343232;
+}
+.registerPage .remind td{
+    font-size: 13px;
+    letter-spacing: 0;
+}
+.registerPage .submit_container{
+    text-align: center;
+}
+.registerPage .submit_container td{
+    padding-top: 20px;
+}

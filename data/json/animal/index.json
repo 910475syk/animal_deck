@@ -1,0 +1,26 @@
+{
+    "dog": [
+            "Xoloitzcuintle",
+            "Bulldog",
+            "Labrador",
+            "Dalmatian"
+            ],
+    "cat": [
+            "Felis_silvestris",
+            "Persian_cat",
+            "Siamese_cat",
+            "Skogkatt"
+            ],
+    "wolf": [
+            "albus",
+            "arabs",
+            "arctos",
+            "chanco"
+            ],
+    "jellyfish": [
+            "yamaguchii",
+            "fleckeri",
+            "nomurai",
+            "victoria"
+            ]
+}

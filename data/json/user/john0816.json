@@ -1,0 +1,15 @@
+{
+    "username": "john0816",
+    "userhead": "data/images/user/john0816/john0816.jpg",
+    "gender": "male",
+    "e-mail":"john0816@gmail.com",
+    "cards":{
+            "dog": [
+                    "Xoloitzcuintle",
+                    "Bulldog"    
+                    ],
+            "cat": [
+                    "Persian_cat"
+                    ]        
+            }
+}
