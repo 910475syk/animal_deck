@@ -143,6 +143,31 @@ $(document).ready(function(){
         }
     }
 
+    $('form').submit(function(event){
+
+        event.preventDefaule();
+
+        let user_register = {};
+        $(this).find('input').each(function(){
+            if($(this).attr('type') == 'radio'){
+                user_register[$(this).attr('name')] = $('input[name="' + $(this).attr('name') + '"]:checked').val();
+            } else {
+                user_register[$(this).attr('name')] = $(this).val();
+            }
+        })
+
+        let Check = new RegisterWork(user_register);
+        Check.dataScan().then(function(fillCheck){
+            if(!fillCheck){
+                alert("資訊格式有錯");
+                return;
+            }
+            alert("data is inputed");
+            Check.dataSet();
+        })
+    })
+
+
 
     // 
 })
