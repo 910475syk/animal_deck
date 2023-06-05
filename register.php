@@ -40,9 +40,32 @@
     $userindexO = fopen("data/json/user/index.json", "r") or die("Unable to open file!");
     $userindexR = fread($userindexO, filesize("data/json/user/index.json"));
     $userindexR = json_decode($userindexR, true);
+    fclose($userindexO);
+    // 加入new user data
+    $userindexR[count($userindexR)] = $newuser;
+    $userindexR = json_encode($userindexR);
+    // 寫入index檔案
+    $userindexO = fopen("data/json/user/index.json", "w");
+    fwrite($userindexO, $userindexR);
+    fclose($userindexO);
 
+    // 創建使用者個人檔案
+    $newuser_json = array();
+    $newuser_json['username'] = $_POST['account'];
+    $newuser_json['userhead'] = "data/images/user/".$_POST['gender'].".png";
+    $newuser_json['gender'] = $_POST['gender'];
+    $newuser_json['e-mail'] = $_POST['email'];
+    $newuser_json['cards'] = array();
+    $newuser_json = json_encode($newuser_json);
+    $userindex_jsonO = fopen("data/json/user".$_POST['account'].".json", "w");
+    fwrite($userindex_jsonO, $newuser_json);
+    fclose($userindex_jsonO);
 
+    // 建立使用者大頭貼圖庫
+    mkdir("data/images/user/".$_POST['account']."/");
 
+    // 完成登入
+    $_SESSION['user'] = $_POST['account'];
 
 
 
